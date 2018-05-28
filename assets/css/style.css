@@ -33,7 +33,7 @@ body{
     font-family: 'Roboto', sans-serif;
     line-height: 28px;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 14px;
     color:#282828;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
@@ -47,7 +47,7 @@ body, html{
 
 /* Link style
 ---------------------------------------------------------*/
-a, {
+a {
     color: #68c3a3;
 }
 a,
@@ -182,7 +182,7 @@ h6 {
 }
 
 /*large-btn*/
-.btn-lg,
+.btn-lg, 
 .btn-group-lg>.btn {
     padding: 14px 20px;
     font-size: 14px;
@@ -195,11 +195,11 @@ h6 {
     border-color: rgba(51, 51, 51, 0.15);
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary.focus,
-.btn-primary:active,
-.btn-primary.active,
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary.focus, 
+.btn-primary:active, 
+.btn-primary.active, 
 .open>.dropdown-toggle.btn-primary {
     color: #fff;
     background-color: #4eb28f;
@@ -212,11 +212,11 @@ h6 {
     border-color: rgba(51, 51, 51, 0.15);
 }
 
-.btn-info:hover,
-.btn-info:focus,
-.btn-info.focus,
-.btn-info:active,
-.btn-info.active,
+.btn-info:hover, 
+.btn-info:focus, 
+.btn-info.focus, 
+.btn-info:active, 
+.btn-info.active, 
 .open>.dropdown-toggle.btn-info {
     color: #fff;
     background-color: #4aa0c2;
@@ -229,10 +229,10 @@ h6 {
     border: 1px solid #fff;
     color: #fff;
 }
-.btn-default:hover,
-.btn-default:focus,
-.btn-default.focus,
-.btn-default:active,
+.btn-default:hover, 
+.btn-default:focus, 
+.btn-default.focus, 
+.btn-default:active, 
 .btn-default.active{
     color: #68c3a3;
     background-color: #fff;
@@ -246,9 +246,9 @@ button:focus {
 
 
 /*IMAGES*/
-/* img {
+img {
     width: 100%;
-} */
+}
 
 hr {
     margin-top: 15px;
@@ -269,7 +269,7 @@ ul, ol {
 
 
 ul.list-check {
-
+    
 }
 
 ul.list-check li{
@@ -363,11 +363,8 @@ ul.list-check li::before {
 	margin-bottom: 16px;
 	color: #52b3d9;
 }
-.intro h1 #second{
+.intro h1 span{
 	color: #68c3a3;
-}
-.intro h1 #border{
-    color: #FF8000;
 }
 .intro p{
 	color: #f7f7f7;
@@ -376,7 +373,7 @@ ul.list-check li::before {
 
 .intro-sub {
 	color: #fff;
-	font-size: 30px;
+	font-size: 24px;
 	line-height: 32px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -384,8 +381,8 @@ ul.list-check li::before {
 	margin-bottom: 20px;
 }
 
-/*
-SOCIAL ICON
+/* 
+SOCIAL ICON 
 -------------------------------------------*/
 .social-icons {
     margin-top: 20px;
@@ -401,26 +398,7 @@ SOCIAL ICON
     height: 40px;
 }
 
-.social-icons button{
-    position: relative;
-    color: #fff;
-    font-size: 18px;
-    margin: 0 7px;
-    line-height: 40px;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-}
-
-
 .social-icons a i::before {
-    position: relative;
-    z-index: 1;
-}
-
-.social-icons button::before {
     position: relative;
     z-index: 1;
 }
@@ -442,40 +420,15 @@ SOCIAL ICON
     -webkit-transition: all 300ms;
        -moz-transition: all 300ms;
          -o-transition: all 300ms;
-            transition: all 300ms;
-}
-
-.social-icons button::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #fff;
-    border-radius: 3px;
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-    -webkit-transition: all 300ms;
-       -moz-transition: all 300ms;
-         -o-transition: all 300ms;
-            transition: all 300ms;
+            transition: all 300ms;            
 }
 
 .social-icons a i:hover::after{
-    background: #FF8000;
+    background: #68c3a3;
     border: 1px solid transparent;
     z-index: 0;
 }
 
-.social-icons button:hover::after{
-    background: #FF8000;
-    border: 1px solid transparent;
-    z-index: -1;
-}
 
 /* === NAVIGATION === */
 .header {
@@ -485,7 +438,6 @@ SOCIAL ICON
     z-index: 998;
     padding-bottom: 1px;
     background: #fff;
-    margin: auto;
 }
 
 .header::after {
@@ -496,15 +448,12 @@ SOCIAL ICON
     height: 2px;
     bottom: 1px;
     left: 0;
-    margin: auto;
 }
 
 .navbar-custom {
     border: 0;
     border-radius: 0;
-    margin: auto;
-    margin-right: 101%; 
-    text-align: center;
+    margin: 0;
     text-transform: uppercase;
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -719,9 +668,6 @@ SOCIAL ICON
     text-transform: uppercase;
 }
 
-#profile {
-    width: 100%;
-}
 
 /* === Resume Section === */
 
@@ -1023,11 +969,11 @@ Resume Timeline
 /* === Skill Section === */
 .skills-section {
     background-color: #1a1e23;
-    color: #fff;
+    color: #fff;   
 }
 .skills-section .section-title{
     color: #fff;
-    margin-bottom: 110px;
+    margin-bottom: 110px;  
 }
 .skills-section .section-title h2{
     color: #fff;
@@ -1106,8 +1052,8 @@ Resume Timeline
     text-align: center;
 }
 .chart canvas {
-    position:absolute;
-    top:0;
+    position:absolute; 
+    top:0; 
     left:0;
 }
 .percent {
@@ -1277,7 +1223,7 @@ Resume Timeline
     text-align: center;
 }
 
-.portfolio:hover .tt-overlay,
+.portfolio:hover .tt-overlay, 
 .portfolio:hover .links {
     opacity: 1;
     -webkit-transform: translate(0,0);
@@ -1303,9 +1249,9 @@ Resume Timeline
   opacity: 0;
   -webkit-backface-visibility: hidden;
   /* ideally, transition speed should match zoom duration */
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out; 
+  -moz-transition: all 0.3s ease-out; 
+  -o-transition: all 0.3s ease-out; 
   transition: all 0.3s ease-out;
 }
 
@@ -1316,7 +1262,7 @@ Resume Timeline
     opacity: 0.8;
 }
 
-.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing .mfp-container, 
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
 }
@@ -1329,7 +1275,7 @@ Resume Timeline
     background: url(../../assets/images/counter-bg.jpg) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
-    color: #fff;
+    color: #fff;  
 }
 
 .tt-overlay-bg {
@@ -1354,7 +1300,7 @@ Resume Timeline
 
 /* === Blog Section === */
 .latest-blog-section {
-
+  
 }
 .blog-post-wrapper {
     padding: 4px;
@@ -1474,7 +1420,7 @@ Icon for all respective meta
 
 .the-author,
 .the-time,
-.the-share,
+.the-share, 
 .the-comments {
     position: relative;
     padding-left: 20px;
@@ -1494,7 +1440,7 @@ Icon for all respective meta
     background: url(../../assets/images/hire-bg.jpg) no-repeat top center #68C3A3;
     background-attachment: fixed;
     background-size: cover;
-    color: #fff;
+    color: #fff;  
 }
 .hire-section-bg {
     padding: 110px 0;
@@ -1516,7 +1462,7 @@ Icon for all respective meta
 
 /* === Contact Section === */
 .contact-section  {
-
+  
 }
 
 .contact-section strong {
@@ -1567,7 +1513,7 @@ Icon for all respective meta
     background: #1a1e23;
     padding: 36px 0;
     color: #fff;
-
+  
 }
 .copyright p {
     margin: 0;
@@ -1865,60 +1811,4 @@ Icon for all respective meta
     border: 5px solid #FFF;
     padding: 5px;
     box-shadow: 0 0px 0px 1px #eee;
-}
-
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    z-index: 11; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: auto; /* Full width */
-    height: auto; /* Full Height */
-    /* overflow: auto; /* Enable scroll if needed */
-    /* opacity: 0.5; */
-
-}
-
-/* Modal Content/Box */
-.modal-content {
-    margin: 15% auto; /* 15% from the top and centered */
-    /* padding: 2em;
-    padding-top: .7em;
-    padding-right: 12em; */
-    border: 1px;
-    width: auto; /* Could be more or less, depending on screen size */
-    background-color: black;
-}
-.modal-opacity {
-    background-color: black;
-    opacity: 0.1;
-}
-
-/* The Close Button */
-.close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    opacity: 0;
-}
-
-.close:hover,
-.close:focus {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.snaplogo{
-    width: 30%;
-    display: block;
-    margin: auto;
-    border-radius: 25px;
-    opacity: 1;
-    z-index: 14;
 }
