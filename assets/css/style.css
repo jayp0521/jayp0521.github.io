@@ -503,7 +503,7 @@ SOCIAL ICON
     border: 0;
     border-radius: 0;
     margin: auto;
-    margin-right: 101%; 
+    /* margin-right: 101%;  */
     text-align: center;
     text-transform: uppercase;
     font-family: 'Roboto Condensed', sans-serif;
