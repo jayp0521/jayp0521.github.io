@@ -373,12 +373,15 @@ ul.list-check li::before {
 	margin-bottom: 16px;
 	color: #52b3d9;
 }
-.intro h1 #second{
-	color: #68c3a3;
-}
+
 .intro h1 #border{
     color: #FF8000;
 }
+
+.intro h1 #second{
+    color: #68c3a3;
+}
+
 .intro p{
 	color: #f7f7f7;
     margin-bottom: 0px;
