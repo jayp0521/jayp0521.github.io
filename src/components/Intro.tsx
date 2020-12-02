@@ -10,7 +10,7 @@ const MyName = styled.p`
   color: var(--orange);
   font-size: clamp(var(--fz-xl), 5vw, var(--fz-2xl));
   font-weight: bold;
-  margin: 3vh 0;
+  margin: 2vh 0;
 `
 
 const Me = styled(MyName)`

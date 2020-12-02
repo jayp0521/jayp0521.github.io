@@ -5,12 +5,18 @@ import { Fade } from 'react-awesome-reveal'
 
 const IntroStyle = styled.div`
   width: 60vw;
-  padding: 10vh 2vw;
+  padding: 0 2vw 0 2vw;
+  margin: 20vh 0 20vh 0;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: var(--background-color);
 `
 
 const PageStyle = styled.div`
   width: 100vw;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
