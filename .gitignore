@@ -48,3 +48,5 @@ Thumbs.db
 /src/app/components/test/test.component.html
 /src/app/components/test/test.component.spec.ts
 /src/app/components/test/test.component.ts
+
+/build
