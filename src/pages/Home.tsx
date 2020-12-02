@@ -46,15 +46,21 @@ const particlesParams: IParticlesParams = {
         },
         shape: {
             type: 'character',
-            character: { value: [ '0', '1' ] },
+            character: {
+                value: [ '0', '1' ],
+                font: 'Verdana',
+                weight: '400',
+                style: '',
+            },
         },
         color: {
             value: '#64ffda',
         },
         size: {
-            value: 200,
+            value: 10,
             random: false,
         },
+
     },
 }
 
