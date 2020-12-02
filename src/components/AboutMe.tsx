@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 const HiMyName = styled.p`
   color: var(--code-color);
-  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md))
+  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+  max-width: 400px;
 `
 
 const MyName = styled.p`
@@ -13,11 +14,12 @@ const MyName = styled.p`
 `
 
 const Me = styled(MyName)`
-  color: #C8C8C8;
+  color: #80b3e0;
 `
 
 const Description = styled(HiMyName)`
-  color: #b3b3b3;
+  color: #4b92d1;
+  line-height: 1.5;
 `
 
 export default function AboutMe() {
