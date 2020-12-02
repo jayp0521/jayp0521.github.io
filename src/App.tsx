@@ -7,6 +7,7 @@ import {
 import './App.css'
 import Home from './pages/Home'
 import GlobalStyle from './styles/globalStyles'
+import NavBar from './components/NavBar'
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <GlobalStyle/>
+                <NavBar/>
                 <Switch>
                     <Route exact path="/">
                         <Home/>

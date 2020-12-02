@@ -7,7 +7,7 @@ const HiMyName = styled.p`
 `
 
 const MyName = styled.p`
-  color: #FF9900;
+  color: var(--orange);
   font-size: clamp(var(--fz-xl), 5vw, var(--fz-2xl));
   font-weight: bold;
   margin: 3vh 0;

@@ -69,7 +69,7 @@ export default function Home() {
         <>
             <PageStyle>
                 <Fade triggerOnce duration={2000}>
-                    <AboutMeStyle><AboutMe/></AboutMeStyle>
+                    <AboutMeStyle id='about_me' key='about_me'><AboutMe/></AboutMeStyle>
                 </Fade>
             </PageStyle>
             <ParticlesStyle><Particles width="100vw" height="100vh" params={particlesParams}/></ParticlesStyle>
