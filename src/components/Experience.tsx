@@ -8,14 +8,13 @@ const JobsName = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1 1 auto;
     width: 100%;
     text-align: center;
     padding: 2vh 0;
     cursor: pointer;
     background-image: linear-gradient(
-        rgba(100, 255, 218, 0.5),
-        rgba(100, 255, 218, 0.5)
+        rgba(100, 255, 218, 0.3),
+        rgba(100, 255, 218, 0.3)
     );
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -29,14 +28,13 @@ const JobsName = styled.div`
 `
 
 const JobsDescription = styled.div`
-    //border: var(--code-color) 1px solid;
     font-family: var(--font-mono);
     color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 2 1 auto;
     padding: 2vh 0 2vh 1vw;
+    min-width: 80%;
 `
 
 const JobsMain = styled.div`
@@ -49,6 +47,7 @@ const JobsMain = styled.div`
 
 const JobsContainer = styled.div<{ primary?: boolean }>`
     flex: ${props => (props.primary ? `3 1 auto` : `1 1 auto`)};
+    min-width: ${props => (props.primary ? `70%` : `auto`)};
 `
 
 interface Jobs {
