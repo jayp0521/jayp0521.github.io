@@ -27,8 +27,8 @@ export default function AboutMe() {
         <>
             <HiMyName>Hi, my name is</HiMyName>
             <MyName>Jay Patel</MyName>
-            <Me>I build and protect the web.</Me>
-            <Description>I am currently hold the title of Software Development Engineer I at Amazon based in New York. I
+            <Me>I help build and protect the web.</Me>
+            <Description>I am currently a Software Development Engineer I at Amazon based in New York. I
                 specialize in building, designing, testing, and probing websites, infrastructure, and
                 more.</Description>
         </>
