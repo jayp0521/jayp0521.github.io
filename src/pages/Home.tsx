@@ -5,7 +5,7 @@ import { Fade } from 'react-awesome-reveal'
 
 const IntroStyle = styled.div`
   width: 60vw;
-  padding: 10vh 0;
+  padding: 10vh 2vw;
   background: var(--background-color);
 `
 
