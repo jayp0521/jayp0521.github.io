@@ -1,14 +1,15 @@
 import AboutMe from '../components/AboutMe'
 import styled from 'styled-components'
 import Particles, { IParticlesParams } from 'react-particles-js'
+import { Fade } from 'react-awesome-reveal'
 
 const AboutMeStyle = styled.div`
   width: 60vw;
+  padding: 10vh 0;
 `
 
 const PageStyle = styled.div`
   width: 100vw;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +17,7 @@ const PageStyle = styled.div`
 `
 
 const ParticlesStyle = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
@@ -47,6 +48,13 @@ const particlesParams: IParticlesParams = {
             type: 'character',
             character: { value: [ '0', '1' ] },
         },
+        color: {
+            value: '#64ffda',
+        },
+        size: {
+            value: 200,
+            random: false,
+        },
     },
 }
 
@@ -54,9 +62,11 @@ export default function Home() {
     return (
         <>
             <PageStyle>
-                <AboutMeStyle><AboutMe/></AboutMeStyle>
-                <ParticlesStyle><Particles width="100vw" height="100vh" params={particlesParams}/></ParticlesStyle>
+                <Fade triggerOnce duration={2000}>
+                    <AboutMeStyle><AboutMe/></AboutMeStyle>
+                </Fade>
             </PageStyle>
+            <ParticlesStyle><Particles width="100vw" height="100vh" params={particlesParams}/></ParticlesStyle>
         </>
     )
 }
