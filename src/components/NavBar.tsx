@@ -23,7 +23,7 @@ interface NavBarItems {
 }
 
 const navBarItems: NavBarItems[] = [
-    { to: '/', icon: faHome, description: '. Home', key: 'about_me' },
+    { to: '/', icon: faHome, description: '. Home', key: 'intro' },
 ]
 
 export default function NavBar() {
