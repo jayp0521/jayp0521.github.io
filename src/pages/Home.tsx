@@ -2,6 +2,7 @@ import Intro from '../components/Intro'
 import styled from 'styled-components'
 import Particles, { IParticlesParams } from 'react-particles-js'
 import { Fade } from 'react-awesome-reveal'
+import Experience from '../components/Experience'
 
 const IntroStyle = styled.div`
   width: 60vw;
@@ -77,6 +78,7 @@ export default function Home() {
             <PageStyle>
                 <Fade triggerOnce duration={2000}>
                     <IntroStyle id='intro' key='intro'><Intro/></IntroStyle>
+                    <IntroStyle id='experience' key='experience'><Experience/></IntroStyle>
                 </Fade>
             </PageStyle>
             <ParticlesStyle><Particles width="100vw" height="100vh" params={particlesParams}/></ParticlesStyle>
