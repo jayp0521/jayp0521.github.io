@@ -51,8 +51,6 @@ export const JobsDescription = styled.div`
 export const JobsMain = styled.div`
     display: flex;
     border: var(--code-color) 1px solid;
-    width: 65vw;
-    max-width: 800px;
 `
 
 export const JobsContainer = styled.div<{ primary?: boolean }>`

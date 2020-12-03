@@ -7,13 +7,13 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types'
 import TextIconButton from '../styles/TextIconButton'
 
 const NavBarSpace = styled.div`
-    top: 1vh;
     position: fixed;
     width: 98vw;
     display: flex;
     justify-content: flex-end;
-    margin-top: 3vh;
+    padding: 4vh 1vh 1vh 0;
     z-index: 999;
+    backdrop-filter: blur(6px);
 `
 
 interface NavBarItems {
