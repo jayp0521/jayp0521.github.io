@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 const HiMyName = styled.p`
-    color: var(--code-color);
+    color: rgba(var(--code-color), 1);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     max-width: 400px;
 `
 
 const MyName = styled.p`
-    color: var(--orange);
+    color: rgba(var(--orange), 1);
     font-size: clamp(var(--fz-xl), 5vw, var(--fz-2xl));
     font-weight: bold;
     margin: 2vh 0;

@@ -6,8 +6,8 @@ const GlobalStyle = createGlobalStyle`
     --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
     --background-color: #001a30;
-    --code-color: #64ffda;
-    --orange: #ff9900;
+    --code-color: 100, 255, 219;
+    --orange: 255, 162, 0;
     --white: #FFF;
 
     --fz-sm: 16px;
