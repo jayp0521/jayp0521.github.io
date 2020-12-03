@@ -5,22 +5,29 @@ import { Fade } from 'react-awesome-reveal'
 import Experience from '../components/Experience'
 
 const IntroStyle = styled.div`
-    width: 60vw;
-    padding: 0 2vw 0 2vw;
-    margin: 20vh 0 20vh 0;
-    height: 61vh;
+    width: 80vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: var(--background-color);
 `
 
-const CenterStyle = styled.div`
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+const PositionStyle = styled.div`
+    .center {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .padding {
+        padding: 3vh 3vw;
+    }
+
+    .background {
+        background: var(--background-color);
+    }
 `
 
 const ParticlesStyle = styled.div`
@@ -81,14 +88,22 @@ export default function Home() {
                 />
             </ParticlesStyle>
             <Fade triggerOnce duration={2000}>
-                <IntroStyle id="intro" key="intro">
-                    <Intro />
-                </IntroStyle>
-                <CenterStyle>
-                    <IntroStyle id="experience" key="experience">
-                        <Experience />
+                <PositionStyle>
+                    <IntroStyle id="intro" key="intro">
+                        <div className={'background padding'}>
+                            <Intro />
+                        </div>
                     </IntroStyle>
-                </CenterStyle>
+                    <IntroStyle
+                        id="experience"
+                        key="experience"
+                        className={'center'}
+                    >
+                        <div className={'background padding'}>
+                            <Experience />
+                        </div>
+                    </IntroStyle>
+                </PositionStyle>
             </Fade>
         </>
     )

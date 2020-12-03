@@ -9,6 +9,7 @@ const JobsName = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    height: 100%;
     text-align: center;
     padding: 2vh 0;
     cursor: pointer;
@@ -34,27 +35,40 @@ const JobsDescription = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 2vh 0 2vh 1vw;
-    min-width: 80%;
+
+    .position {
+        color: var(--orange);
+        margin: 0.5vh 0;
+    }
+
+    .date {
+        margin: 0.5vh 0;
+    }
+
+    .description {
+        margin: 1.5vh 0;
+    }
 `
 
 const JobsMain = styled.div`
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     border: var(--code-color) 1px solid;
     width: 100%;
 `
 
 const JobsContainer = styled.div<{ primary?: boolean }>`
     flex: ${props => (props.primary ? `3 1 auto` : `1 1 auto`)};
-    min-width: ${props => (props.primary ? `70%` : `auto`)};
+    min-width: ${props => (props.primary ? `75%` : `auto`)};
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 `
 
 interface Jobs {
     name: string
     description: string[]
     start_date: Date
-    end_date: Date | string
+    end_date: Date | null
     position: string
 }
 
@@ -62,18 +76,28 @@ const jobs: Jobs[] = [
     {
         name: 'Amazon',
         description: ['stuff'],
-        start_date: new Date(2021, 1, 4),
-        end_date: 'Present',
+        start_date: new Date(2021, 0, 4),
+        end_date: null,
         position: 'Software Development Engineer 1',
     },
     {
         name: 'Amazon Internship',
         description: ['other stuff'],
-        start_date: new Date(2020, 6, 1),
-        end_date: new Date(2020, 8, 21),
+        start_date: new Date(2020, 5, 1),
+        end_date: new Date(2020, 7, 21),
         position: 'Software Development Engineer Intern',
     },
 ]
+
+function dateToString(date: Date | null) {
+    return date
+        ? date.toLocaleDateString(undefined, {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+          })
+        : 'Present'
+}
 
 export default function Experience() {
     const [currentShownJob, setCurrentShownJob] = useState(jobs[0])
@@ -95,7 +119,17 @@ export default function Experience() {
                 </JobsContainer>
                 <JobsContainer primary>
                     <JobsDescription>
-                        {currentShownJob.description}
+                        <h2 className={'position'}>
+                            {currentShownJob.position}
+                        </h2>
+                        <p className={'date'}>
+                            {dateToString(currentShownJob.start_date) +
+                                ' - ' +
+                                dateToString(currentShownJob.end_date)}
+                        </p>
+                        <p className={'description'}>
+                            {currentShownJob.description}
+                        </p>
                     </JobsDescription>
                 </JobsContainer>
             </JobsMain>
