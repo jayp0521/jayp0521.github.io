@@ -32,7 +32,7 @@ export const JobsDescription = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2vh 0 2vh 1vw;
+    padding: 2vh 2vw;
 
     .position {
         color: var(--orange);

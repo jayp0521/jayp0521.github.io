@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const GradientList = styled.ul`
     /* List */
+    padding: 0 2%;
 
     ul {
         counter-reset: index;
