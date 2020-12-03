@@ -13,22 +13,33 @@ interface Jobs {
     start_date: Date
     end_date: Date | null
     position: string
+    resource_link?: URL
 }
 
 const jobs: Jobs[] = [
     {
         name: 'Amazon',
-        description: [...Array(10).keys()].map(_ => 'hi'),
+        description: ['Starting Soon'],
         start_date: new Date(2021, 0, 4),
         end_date: null,
         position: 'Software Development Engineer 1',
     },
     {
         name: 'AWS Internship',
-        description: ['other stuff'],
+        description: [
+            'Utilized Golang to create APIs to securely communicate between CodeBuild and CodeArtifact',
+            'Sanitized Data in Scala',
+            'Integrated other services to set up package managers',
+            'Communicated with senior engineers to develop & establish best scalable practices',
+            'Developed using Microservices to allow scalability and ensure continuous customer access',
+            'Learned CodeBuild, DynamoDB, and more',
+        ],
         start_date: new Date(2020, 5, 1),
         end_date: new Date(2020, 7, 21),
         position: 'Software Development Engineer Intern',
+        resource_link: new URL(
+            'https://docs.aws.amazon.com/codeartifact/latest/ug/codebuild.html',
+        ),
     },
 ]
 
