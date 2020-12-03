@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const JobsName = styled.div`
-    border: var(--code-color) 1px solid;
     font-family: var(--font-mono);
     color: var(--white);
     display: flex;
@@ -12,10 +11,7 @@ export const JobsName = styled.div`
     text-align: center;
     padding: 2vh 0;
     cursor: pointer;
-    background: linear-gradient(
-            rgba(100, 255, 218, 0.3),
-            rgba(100, 255, 218, 0.3)
-        )
+    background: linear-gradient(rgba(255, 153, 0, 0.2), rgba(255, 153, 0, 0.2))
         50% 50% no-repeat;
     background-size: 0 100%;
     transition: background-size 0.5s, color 0.5s;
@@ -33,6 +29,7 @@ export const JobsDescription = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 2vh 2vw;
+    border: var(--code-color) 1px solid;
 
     .position {
         color: var(--orange);
@@ -50,7 +47,6 @@ export const JobsDescription = styled.div`
 
 export const JobsMain = styled.div`
     display: flex;
-    border: var(--code-color) 1px solid;
 `
 
 export const JobsContainer = styled.div<{ primary?: boolean }>`
@@ -61,11 +57,13 @@ export const JobsContainer = styled.div<{ primary?: boolean }>`
     min-height: 100%;
 
     .active {
-        background: rgba(100, 255, 218, 0.1);
+        background: rgba(255, 153, 0, 0.2);
         transition: background-color 0.5s ease-in-out;
+        border-right: var(--orange) 2px solid;
+        z-index: 1;
 
         &:hover {
-            background: rgba(100, 255, 218, 0.3);
+            background: rgba(255, 153, 0, 0.4);
         }
     }
 `

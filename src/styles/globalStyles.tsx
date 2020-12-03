@@ -7,9 +7,9 @@ const GlobalStyle = createGlobalStyle`
 
     --background-color: #001a30;
     --code-color: #64ffda;
-    --orange: #FF9900;
+    --orange: #ff9900;
     --white: #FFF;
-    
+
     --fz-sm: 16px;
     --fz-md: 20px;
     --fz-lg: 24px;

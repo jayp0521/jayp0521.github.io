@@ -41,6 +41,34 @@ const jobs: Jobs[] = [
             'https://docs.aws.amazon.com/codeartifact/latest/ug/codebuild.html',
         ),
     },
+    {
+        name: 'Cigna',
+        description: [
+            'Assisted in developing a website to show information about in-network healthcare providers utilizing Angular and Leaflet.js',
+            'Established endpoints and creating REST APIs with Django',
+            'Utilized Vue.js to build a modern web application to support children with Autism',
+            'Incorporated Flask and MongoDB to maintain the backend',
+        ],
+        start_date: new Date(2019, 5, 28),
+        end_date: new Date(2020, 3, 13),
+        position: 'Software Engineer (TECDP) Intern',
+        resource_link: new URL(
+            'https://docs.aws.amazon.com/codeartifact/latest/ug/codebuild.html',
+        ),
+    },
+    {
+        name: 'UConn',
+        description: [
+            'Developed an Image Classifier using Keras and TensorFlow',
+            'Exploited knowledge derived from data for data development with AI algorithms and machine learning',
+        ],
+        start_date: new Date(2018, 8, 28),
+        end_date: new Date(2020, 5, 14),
+        position: 'Undergraduate Research Assistant',
+        resource_link: new URL(
+            'https://docs.aws.amazon.com/codeartifact/latest/ug/codebuild.html',
+        ),
+    },
 ]
 
 function dateToString(date: Date | null) {
