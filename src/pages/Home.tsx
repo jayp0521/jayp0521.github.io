@@ -9,7 +9,6 @@ import {
 } from '../components/ParticlesComponent'
 
 const IntroStyle = styled.div`
-    width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,10 +21,7 @@ const IntroStyle = styled.div`
 const PositionStyle = styled.div`
     .center {
         width: 100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        place-items: center;
     }
 
     .padding {
@@ -37,7 +33,7 @@ const PositionStyle = styled.div`
     }
 
     .mw800 {
-        max-width: 800px;
+        width: min(95vw, 800px);
     }
 `
 
