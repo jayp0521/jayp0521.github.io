@@ -1,14 +1,12 @@
 import Intro from '../components/Intro'
 import styled from 'styled-components'
-import Particles from 'react-particles-js'
 import { Fade } from 'react-awesome-reveal'
-import Experience from '../components/Experience'
-import {
-    particlesParams,
-    ParticlesStyle,
-} from '../components/ParticlesComponent'
+import FullPageLazyParticles from '../components/ParticlesComponent'
+import { lazy, Suspense } from 'react'
 
-const IntroStyle = styled.div`
+const Experience = lazy(() => import('../components/Experience'))
+
+const SectionStyle = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -37,32 +35,30 @@ const PositionStyle = styled.div`
     }
 `
 
+function ExperienceFunction() {
+    return (
+        <Suspense fallback={<p>Loading My Experience</p>}>
+            <SectionStyle id="experience" key="experience" className={'center'}>
+                <div className={'background padding mw800'}>
+                    <Experience />
+                </div>
+            </SectionStyle>
+        </Suspense>
+    )
+}
+
 export default function Home() {
     return (
         <>
-            <ParticlesStyle>
-                <Particles
-                    width="100vw"
-                    height="100vh"
-                    params={particlesParams}
-                />
-            </ParticlesStyle>
+            <FullPageLazyParticles />
             <Fade triggerOnce duration={2000}>
                 <PositionStyle>
-                    <IntroStyle id="intro" key="intro">
+                    <SectionStyle id="intro" key="intro">
                         <div className={'background padding'}>
                             <Intro />
                         </div>
-                    </IntroStyle>
-                    <IntroStyle
-                        id="experience"
-                        key="experience"
-                        className={'center'}
-                    >
-                        <div className={'background padding mw800'}>
-                            <Experience />
-                        </div>
-                    </IntroStyle>
+                    </SectionStyle>
+                    <ExperienceFunction />
                 </PositionStyle>
             </Fade>
         </>

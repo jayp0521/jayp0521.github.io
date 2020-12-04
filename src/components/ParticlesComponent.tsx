@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { IParticlesParams } from 'react-particles-js'
+import { lazy, Suspense } from 'react'
 
 export const ParticlesStyle = styled.div`
     position: fixed;
@@ -7,6 +8,8 @@ export const ParticlesStyle = styled.div`
     left: 0;
     z-index: -1;
 `
+
+const Particles = lazy(() => import('react-particles-js'))
 
 export const particlesParams: IParticlesParams = {
     interactivity: {
@@ -46,4 +49,17 @@ export const particlesParams: IParticlesParams = {
             random: false,
         },
     },
+}
+export default function FullPageLazyParticles() {
+    return (
+        <Suspense fallback={<div>Background Loading...</div>}>
+            <ParticlesStyle>
+                <Particles
+                    width="100vw"
+                    height="100vh"
+                    params={particlesParams}
+                />
+            </ParticlesStyle>
+        </Suspense>
+    )
 }
