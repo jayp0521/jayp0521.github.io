@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { rootColors } from './globalStyles'
+import { rgba } from 'polished'
 
 const TextIconButton = styled.button`
     text-decoration: none;
@@ -11,11 +13,11 @@ const TextIconButton = styled.button`
     transition: color 1s ease;
 
     :hover {
-        color: rgba(var(--code-color), 1);
+        color: ${rgba(rootColors.codeColor, 1)};
     }
 
     .fai {
-        color: rgba(var(--code-color), 1);
+        color: ${rgba(rootColors.codeColor, 1)};
     }
 `
 
