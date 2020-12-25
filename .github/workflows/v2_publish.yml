@@ -9,7 +9,9 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.4 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
       - name: Cache multiple paths
         uses: actions/cache@v2.1.3
         with:
