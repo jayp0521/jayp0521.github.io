@@ -1,13 +1,15 @@
 import styled from 'styled-components'
+import { rootColors } from '../styles/globalStyles'
+import { rgba } from 'polished'
 
 const HiMyName = styled.p`
-    color: rgba(var(--code-color), 1);
+    color: ${rgba(rootColors.codeColor, 1)};
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     max-width: 400px;
 `
 
 const MyName = styled.p`
-    color: rgba(var(--orange), 1);
+    color: ${rgba(rootColors.orange, 1)};
     font-size: clamp(var(--fz-xl), 5vw, var(--fz-2xl));
     font-weight: bold;
     margin: 2vh 0;

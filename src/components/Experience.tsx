@@ -117,9 +117,9 @@ export default function Experience() {
                                 dateToString(currentShownJob.end_date)}
                         </p>
                         <GradientList className={'description'}>
-                            {currentShownJob.description.map(sentence => {
-                                return <li>{sentence}</li>
-                            })}
+                            {currentShownJob.description.map(sentence => (
+                                <li key={sentence}>{sentence}</li>
+                            ))}
                         </GradientList>
                     </JobsDescription>
                 </JobsContainer>

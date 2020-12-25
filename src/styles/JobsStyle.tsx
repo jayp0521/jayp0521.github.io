@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { rgba } from 'polished'
+import { rootColors } from './globalStyles'
 
 export const JobsName = styled.div`
     font-family: var(--font-mono);
@@ -12,8 +14,8 @@ export const JobsName = styled.div`
     padding: 2vh 0;
     cursor: pointer;
     background: linear-gradient(
-            rgba(var(--orange), 0.2),
-            rgba(var(--orange), 0.2)
+            ${rgba(rootColors.orange, 0.2)},
+            ${rgba(rootColors.orange, 0.2)}
         )
         50% 50% no-repeat;
     background-size: 0 100%;
@@ -32,10 +34,11 @@ export const JobsDescription = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 2vh 2vw;
-    border: rgba(var(--code-color), 1) 1px solid;
+    border: ${rgba(rootColors.codeColor, 1)} 1px solid;
+    max-height: 80vh;
 
     .position {
-        color: rgba(var(--orange), 1);
+        color: ${rgba(rootColors.orange, 1)};
         margin: 1vh 0;
     }
 
@@ -60,22 +63,22 @@ export const JobsContainer = styled.div<{ primary?: boolean }>`
     min-height: 100%;
 
     .active {
-        background: rgba(var(--orange), 0.2);
+        background: ${rgba(rootColors.orange, 0.2)};
         transition: background-color 0.5s ease-in-out;
         animation: grow 1s;
-        border-right: rgba(var(--orange), 1) 1px solid;
+        border-right: ${rgba(rootColors.orange, 1)} 1px solid;
         z-index: 1;
 
         &:hover {
-            background: rgba(var(--orange), 0.4);
+            background: ${rgba(rootColors.orange, 0.4)};
         }
 
         @keyframes grow {
             from {
-                border-right: rgba(var(--code-color), 1) 1px solid;
+                border-right: ${rgba(rootColors.orange, 1)} 1px solid;
             }
             to {
-                border-right: rgba(var(--orange), 1) 1px solid;
+                border-right: ${rgba(rootColors.orange, 1)} 1px solid;
             }
         }
     }

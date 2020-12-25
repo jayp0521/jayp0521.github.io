@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
 import FullPageLazyParticles from '../components/ParticlesComponent'
 import { lazy, Suspense } from 'react'
+import { rgba } from 'polished'
+import { rootColors } from '../styles/globalStyles'
 
 const Experience = lazy(() => import('../components/Experience'))
 
@@ -18,7 +20,7 @@ const SectionStyle = styled.div`
 
 const PositionStyle = styled.div`
     .center {
-        width: 100vw;
+        width: 99.5vw;
         place-items: center;
     }
 
@@ -27,7 +29,7 @@ const PositionStyle = styled.div`
     }
 
     .background {
-        background: var(--background-color);
+        background: ${rgba(rootColors.backgroundColor, 1)};
     }
 
     .mw800 {
