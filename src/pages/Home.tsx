@@ -7,6 +7,7 @@ import { rgba } from 'polished'
 import { rootColors } from '../styles/globalStyles'
 
 const Experience = lazy(() => import('../components/Experience'))
+const AboutMe = lazy(() => import('../components/AboutMe'))
 
 const SectionStyle = styled.div`
     min-height: 100vh;
@@ -37,6 +38,18 @@ const PositionStyle = styled.div`
     }
 `
 
+function AboutMeFunction() {
+    return (
+        <Suspense fallback={<p>Loading About Me</p>}>
+            <SectionStyle id="about_me" key="about_me" className={'center'}>
+                <div className={'background padding mw800'}>
+                    <AboutMe />
+                </div>
+            </SectionStyle>
+        </Suspense>
+    )
+}
+
 function ExperienceFunction() {
     return (
         <Suspense fallback={<p>Loading My Experience</p>}>
@@ -60,6 +73,7 @@ export default function Home() {
                             <Intro />
                         </div>
                     </SectionStyle>
+                    <AboutMeFunction />
                     <ExperienceFunction />
                 </PositionStyle>
             </Fade>

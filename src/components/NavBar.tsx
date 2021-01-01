@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons/faHome'
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons/faLaptopCode'
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons/faUserCircle'
 import styled from 'styled-components'
 import { HashLink } from 'react-router-hash-link'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types'
@@ -25,6 +26,12 @@ interface NavBarItems {
 
 const navBarItems: NavBarItems[] = [
     { to: '/', icon: faHome, description: '. Home', key: 'intro' },
+    {
+        to: '/',
+        icon: faUserCircle,
+        description: '. About Me',
+        key: 'about_me',
+    },
     {
         to: '/',
         icon: faLaptopCode,
