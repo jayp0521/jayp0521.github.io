@@ -5,6 +5,7 @@ export const rootColors = {
     orange: '#ffa200',
     codeColor: '#64ffdb',
     backgroundColor: '#001a30',
+    white: '#FFFFFF',
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -20,34 +21,40 @@ const GlobalStyle = createGlobalStyle`
     --fz-xl: 32px;
     --fz-2xl: 64px;
   }
-  
+
   ::-webkit-scrollbar {
-        width: 4px;
-        height: 4px;
-    }
-    ::-webkit-scrollbar-button {
-        width: 0;
-        height: 0;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: ${rgba(rootColors.orange, 0.9)};
-        border: 0;
-        border-radius: 50px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: ${rgba(rootColors.orange, 1)};
-    }
-    ::-webkit-scrollbar-thumb:active {
-        background: ${darken(0.2, rgba(rootColors.orange, 1))};
-    }
-    ::-webkit-scrollbar-track {
-        background: #666666;
-        border: 0 none #ffffff;
-        border-radius: 50px;
-    }
-    ::-webkit-scrollbar-corner {
-        background: transparent;
-    }
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${rgba(rootColors.orange, 0.9)};
+    border: 0;
+    border-radius: 50px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${rgba(rootColors.orange, 1)};
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: ${darken(0.2, rgba(rootColors.orange, 1))};
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #666666;
+    border: 0 none #ffffff;
+    border-radius: 50px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 
   body {
     margin: 0;

@@ -24,7 +24,7 @@ const Description = styled(HiMyName)`
     line-height: 1.5;
 `
 
-export default function AboutMe() {
+export default function Intro() {
     return (
         <>
             <HiMyName>Hi, my name is</HiMyName>
